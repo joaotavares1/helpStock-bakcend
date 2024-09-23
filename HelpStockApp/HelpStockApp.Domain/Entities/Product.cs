@@ -15,7 +15,7 @@ namespace HelpStockApp.Domain.Entities
         {
             ValidateDomain(name, description, price, stock, image);
         }
-        public Product(int id, string name, string description, decimal price, int stock, string image)
+        public Product(int id, string name, string description, decimal price, int stock, string? image )
         {
             DomainExceptionValidation.When(id < 0, "Invalid Id value.");
             Id = id;
@@ -29,8 +29,9 @@ namespace HelpStockApp.Domain.Entities
             DomainExceptionValidation.When(string.IsNullOrEmpty(name), "Invalid name, name is required!");
             DomainExceptionValidation.When(name.Length < 3, "Invalid name, too short. minimum 3 characters!");
             DomainExceptionValidation.When(string.IsNullOrEmpty(description), "Invalid description, description is required!");
-            DomainExceptionValidation.When(description.Length < 5, "Invalid name, too short. minimum 5 characters!");
+            DomainExceptionValidation.When(description.Length < 5, "Invalid description, too short. minimum 5 characters!");
             DomainExceptionValidation.When(image.Length > 250, "Invalid image URL, too long. maximum 250 characters!");
+            DomainExceptionValidation.When(string.IsNullOrEmpty(image), "Invalid image. Image is required");
 
             Name = name;
             Description = description;
