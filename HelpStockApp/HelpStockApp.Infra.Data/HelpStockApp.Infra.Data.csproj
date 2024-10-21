@@ -23,4 +23,9 @@
     <ProjectReference Include="..\HelpStockApp.Domain\HelpStockApp.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Identity\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
