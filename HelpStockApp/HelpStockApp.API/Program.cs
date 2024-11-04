@@ -1,6 +1,4 @@
-using HelpStockApp.Infra.Data.Context;
 using HelpStockApp.Infra.IoC;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
