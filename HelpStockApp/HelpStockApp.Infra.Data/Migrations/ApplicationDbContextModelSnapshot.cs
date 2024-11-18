@@ -103,6 +103,58 @@ namespace HelpStockApp.Infra.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 0,
+                            Description = "PencilCase",
+                            Image = "image1",
+                            Name = "Estojo",
+                            Price = 20m,
+                            Stock = 30
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 0,
+                            Description = "Samsung",
+                            Image = "image1",
+                            Name = "Celular",
+                            Price = 1500m,
+                            Stock = 50
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 0,
+                            Description = "Argola grande",
+                            Image = "image1",
+                            Name = "Brinco",
+                            Price = 300m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 0,
+                            Description = "Gamer",
+                            Image = "image1",
+                            Name = "Cadeira",
+                            Price = 2000m,
+                            Stock = 20
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 0,
+                            Description = "Masculina",
+                            Image = "image1",
+                            Name = "Camisa",
+                            Price = 250m,
+                            Stock = 5
+                        });
                 });
 
             modelBuilder.Entity("HelpStockApp.Domain.Entities.Product", b =>
